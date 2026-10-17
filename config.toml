@@ -1,0 +1,38 @@
+# Indian Stock Advisor - your settings.
+# Edit these to match your account. Everything else reads from here.
+
+[account]
+capital = 500000            # total trading capital in INR
+risk_per_trade_pct = 1.0    # max % of capital you lose if a stop is hit
+max_open_positions = 8      # swing positions held at the same time
+max_position_pct = 20.0     # no single position above this % of capital
+broker = "zerodha"          # zerodha | groww | dhan (cost model)
+
+[universe]
+index = "nifty200"          # nifty50 | nifty100 | nifty200 | nifty500
+history_years = 6           # daily history to download
+
+[swing]
+min_avg_traded_value_cr = 20   # skip illiquid stocks (avg daily turnover, crore)
+stop_atr = 2.0                 # stop distance in ATRs
+target1_r = 1.5                # first target in R multiples
+target2_r = 3.0
+max_hold_days = 20
+
+[longterm]
+portfolio_size = 15
+max_per_sector = 3
+rebalance = "monthly"
+
+[intraday]
+interval = "15m"
+risk_per_trade_pct = 0.5
+
+[ai]
+model = "claude-opus-5-5"
+effort = "medium"           # low | medium | high
+enabled = true              # needs ANTHROPIC_API_KEY; falls back to rules if missing
+
+[news]
+lookback_days = 10
+max_items = 12
