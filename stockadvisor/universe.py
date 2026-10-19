@@ -19,6 +19,7 @@ INDEX_FILES = {
     "nifty100": "ind_nifty100list.csv",
     "nifty200": "ind_nifty200list.csv",
     "nifty500": "ind_nifty500list.csv",
+    "niftymidcap150": "ind_niftymidcap150list.csv",
 }
 SOURCES = [
     "https://niftyindices.com/IndexConstituent/{f}",
